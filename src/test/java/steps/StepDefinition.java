@@ -9,13 +9,16 @@ public class StepDefinition extends Base{
 
     @And("^I enter the username (.*)$")
     public void i_enter_the_username_user_name(String username) {
+            loginPage.enterUsername(username);
     }
     @And("^I enter the password (.*)$")
     public void i_enter_th_password_pass(String password) {
+            loginPage.enterPassword(password);
     }
 
     @When("I click on login button")
     public void i_click_on_login_button() {
+            loginPage.clickLoginButton();
     }
 
     @Then("The homepage is displayed")
